@@ -1,0 +1,1 @@
+pyuic5 -o QTimer.py QTimer.ui

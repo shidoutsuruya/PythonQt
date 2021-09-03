@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTextEdit" name="textEdit"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile_F">
+    <property name="title">
+     <string>File(F)</string>
+    </property>
+    <addaction name="actionopen"/>
+    <addaction name="actionnew_file"/>
+    <addaction name="actionfile_save"/>
+    <addaction name="separator"/>
+    <addaction name="actionclose"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit_E">
+    <property name="title">
+     <string>Edit(E)</string>
+    </property>
+    <addaction name="actioncut"/>
+    <addaction name="actioncopy"/>
+    <addaction name="actionpaste"/>
+    <addaction name="separator"/>
+    <addaction name="actionundo"/>
+    <addaction name="actionredo"/>
+    <addaction name="separator"/>
+    <addaction name="actionselect_all"/>
+    <addaction name="actionclear"/>
+   </widget>
+   <widget class="QMenu" name="menuFormat_M">
+    <property name="title">
+     <string>Format(M)</string>
+    </property>
+    <widget class="QMenu" name="menulanguage">
+     <property name="title">
+      <string>language</string>
+     </property>
+     <addaction name="actionenglish"/>
+     <addaction name="actionchinese"/>
+    </widget>
+    <addaction name="actionfont_bold"/>
+    <addaction name="actionitalic"/>
+    <addaction name="actionunderline"/>
+    <addaction name="separator"/>
+    <addaction name="actiontoggletext"/>
+    <addaction name="menulanguage"/>
+   </widget>
+   <addaction name="menuFile_F"/>
+   <addaction name="menuEdit_E"/>
+   <addaction name="menuFormat_M"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionopen"/>
+   <addaction name="actionnew_file"/>
+   <addaction name="separator"/>
+   <addaction name="actioncut"/>
+   <addaction name="actioncopy"/>
+   <addaction name="actionpaste"/>
+   <addaction name="actionfile_save"/>
+   <addaction name="separator"/>
+   <addaction name="actionfont_bold"/>
+   <addaction name="actionitalic"/>
+   <addaction name="actionunderline"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionopen">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/122.bmp</normaloff>:/icons/images/122.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>open</string>
+   </property>
+   <property name="toolTip">
+    <string>open files</string>
+   </property>
+  </action>
+  <action name="actioncut">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/200.bmp</normaloff>:/icons/images/200.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>cut</string>
+   </property>
+   <property name="toolTip">
+    <string>cut</string>
+   </property>
+  </action>
+  <action name="actioncopy">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/202.bmp</normaloff>:/icons/images/202.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>copy</string>
+   </property>
+  </action>
+  <action name="actionpaste">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/204.bmp</normaloff>:/icons/images/204.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>paste</string>
+   </property>
+  </action>
+  <action name="actionfont_bold">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/500.bmp</normaloff>:/icons/images/500.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>font_bold</string>
+   </property>
+  </action>
+  <action name="actionitalic">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/502.bmp</normaloff>:/icons/images/502.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>italic</string>
+   </property>
+  </action>
+  <action name="actionunderline">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/504.bmp</normaloff>:/icons/images/504.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>underline</string>
+   </property>
+  </action>
+  <action name="actionclose">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/132.bmp</normaloff>:/icons/images/132.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>close</string>
+   </property>
+  </action>
+  <action name="actiontoggletext">
+   <property name="text">
+    <string>toggletext</string>
+   </property>
+  </action>
+  <action name="actionclear">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/212.bmp</normaloff>:/icons/images/212.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>clear</string>
+   </property>
+  </action>
+  <action name="actionundo">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/206.bmp</normaloff>:/icons/images/206.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>undo</string>
+   </property>
+  </action>
+  <action name="actionredo">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/208.bmp</normaloff>:/icons/images/208.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>redo</string>
+   </property>
+  </action>
+  <action name="actionselect_all">
+   <property name="text">
+    <string>select_all</string>
+   </property>
+  </action>
+  <action name="actionnew_file">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/100.bmp</normaloff>:/icons/images/100.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>new_file</string>
+   </property>
+  </action>
+  <action name="actionfile_save">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/104.bmp</normaloff>:/icons/images/104.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>file_save</string>
+   </property>
+  </action>
+  <action name="actionchinese">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/CN.jpg</normaloff>:/icons/images/CN.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>chinese</string>
+   </property>
+  </action>
+  <action name="actionenglish">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/timg2.jpg</normaloff>:/icons/images/timg2.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>english</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actioncut</sender>
+   <signal>triggered()</signal>
+   <receiver>textEdit</receiver>
+   <slot>cut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>197</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionpaste</sender>
+   <signal>triggered()</signal>
+   <receiver>textEdit</receiver>
+   <slot>paste()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>197</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actioncopy</sender>
+   <signal>triggered()</signal>
+   <receiver>textEdit</receiver>
+   <slot>copy()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>197</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionundo</sender>
+   <signal>triggered()</signal>
+   <receiver>textEdit</receiver>
+   <slot>undo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>197</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionredo</sender>
+   <signal>triggered()</signal>
+   <receiver>textEdit</receiver>
+   <slot>redo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>197</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionclear</sender>
+   <signal>triggered()</signal>
+   <receiver>textEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>197</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionclose</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionselect_all</sender>
+   <signal>triggered()</signal>
+   <receiver>textEdit</receiver>
+   <slot>selectAll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>197</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>textEdit</sender>
+   <signal>undoAvailable(bool)</signal>
+   <receiver>actionundo</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>212</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>textEdit</sender>
+   <signal>redoAvailable(bool)</signal>
+   <receiver>actionredo</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>212</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

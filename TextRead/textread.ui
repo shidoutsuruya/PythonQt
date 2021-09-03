@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TextRead</class>
+ <widget class="QMainWindow" name="TextRead">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>TextRead</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPlainTextEdit" name="plainTextEdit"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>17</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionQFileOpen"/>
+   <addaction name="actionQFileSave"/>
+   <addaction name="separator"/>
+   <addaction name="actionStreamOpen"/>
+   <addaction name="actionSteamSave"/>
+   <addaction name="separator"/>
+   <addaction name="actionPythonOpen"/>
+   <addaction name="actionPythonSave"/>
+   <addaction name="separator"/>
+   <addaction name="actionExit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionQFileOpen">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icon/Open.ico</normaloff>:/icon/Open.ico</iconset>
+   </property>
+   <property name="text">
+    <string>QFileOpen</string>
+   </property>
+  </action>
+  <action name="actionQFileSave">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icon/Save.ico</normaloff>:/icon/Save.ico</iconset>
+   </property>
+   <property name="text">
+    <string>QFileSave</string>
+   </property>
+  </action>
+  <action name="actionStreamOpen">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icon/Open.ico</normaloff>:/icon/Open.ico</iconset>
+   </property>
+   <property name="text">
+    <string>StreamOpen</string>
+   </property>
+  </action>
+  <action name="actionSteamSave">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icon/Save.ico</normaloff>:/icon/Save.ico</iconset>
+   </property>
+   <property name="text">
+    <string>SteamSave</string>
+   </property>
+  </action>
+  <action name="actionPythonOpen">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icon/Open.ico</normaloff>:/icon/Open.ico</iconset>
+   </property>
+   <property name="text">
+    <string>PythonOpen</string>
+   </property>
+  </action>
+  <action name="actionPythonSave">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icon/Save.ico</normaloff>:/icon/Save.ico</iconset>
+   </property>
+   <property name="text">
+    <string>PythonSave</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icon/Close.ico</normaloff>:/icon/Close.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>TextRead</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>257</x>
+     <y>173</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

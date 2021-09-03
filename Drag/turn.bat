@@ -1,0 +1,1 @@
+pyuic5 -o Drag.py drag.ui

@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>image/B.ico</file>
+        <file>image/I.png</file>
+        <file>image/icons.qrc</file>
+        <file>image/left.png</file>
+        <file>image/middle.png</file>
+        <file>image/right.jpg</file>
+        <file>image/U.png</file>
+    </qresource>
+</RCC>

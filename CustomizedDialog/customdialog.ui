@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CustomDialog</class>
+ <widget class="QMainWindow" name="CustomDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>447</width>
+    <height>273</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CustomDialog</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>5</y>
+      <width>396</width>
+      <height>211</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>447</width>
+     <height>17</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionSet_line"/>
+   <addaction name="actionSet_title"/>
+   <addaction name="actionSet_cell"/>
+   <addaction name="separator"/>
+   <addaction name="actionExit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionSet_line">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/130.bmp</normaloff>:/icons/130.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>Set line</string>
+   </property>
+  </action>
+  <action name="actionSet_title">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/516.bmp</normaloff>:/icons/516.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>Set title</string>
+   </property>
+  </action>
+  <action name="actionSet_cell">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/128.bmp</normaloff>:/icons/128.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>Set cell</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/exit.bmp</normaloff>:/icons/exit.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,1 @@
+pyuic5 -o Filter.py filter.ui

@@ -1,0 +1,1 @@
+pyuic5 -o ui_camera.py video.ui

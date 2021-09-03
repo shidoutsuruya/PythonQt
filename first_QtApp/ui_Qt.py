@@ -1,0 +1,101 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'qt.ui'
+#
+# Created by: PyQt5 UI code generator 5.13.2
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_qt(object):
+    def setupUi(self, qt):
+        qt.setObjectName("qt")
+        qt.resize(483, 270)
+        
+        self.centralWidget = QtWidgets.QWidget(qt)
+        self.centralWidget.setObjectName("centralWidget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.centralWidget)
+        self.verticalLayout.setContentsMargins(11, 11, 11, 11)
+        self.verticalLayout.setSpacing(6)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setSpacing(6)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.Underline = QtWidgets.QCheckBox(self.centralWidget)
+        self.Underline.setObjectName("Underline")
+        self.horizontalLayout.addWidget(self.Underline)
+        self.Italic = QtWidgets.QCheckBox(self.centralWidget)
+        self.Italic.setObjectName("Italic")
+        self.horizontalLayout.addWidget(self.Italic)
+        self.Bold = QtWidgets.QCheckBox(self.centralWidget)
+        self.Bold.setObjectName("Bold")
+        self.horizontalLayout.addWidget(self.Bold)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setSpacing(6)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.Black = QtWidgets.QRadioButton(self.centralWidget)
+        self.Black.setObjectName("Black")
+        self.horizontalLayout_2.addWidget(self.Black)
+        self.Red = QtWidgets.QRadioButton(self.centralWidget)
+        self.Red.setObjectName("Red")
+        self.horizontalLayout_2.addWidget(self.Red)
+        self.Blue = QtWidgets.QRadioButton(self.centralWidget)
+        self.Blue.setObjectName("Blue")
+        self.horizontalLayout_2.addWidget(self.Blue)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
+        self.plainTextEdit = QtWidgets.QPlainTextEdit(self.centralWidget)
+        font = QtGui.QFont()
+        font.setFamily("宋体")
+        font.setPointSize(48)
+        self.plainTextEdit.setFont(font)
+        self.plainTextEdit.setObjectName("plainTextEdit")
+        self.verticalLayout.addWidget(self.plainTextEdit)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setSpacing(6)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.clear = QtWidgets.QPushButton(self.centralWidget)
+        self.clear.setObjectName("clear")
+        self.horizontalLayout_3.addWidget(self.clear)
+        spacerItem = QtWidgets.QSpacerItem(158, 46, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem)
+        self.Ok = QtWidgets.QPushButton(self.centralWidget)
+        self.Ok.setObjectName("Ok")
+        self.horizontalLayout_3.addWidget(self.Ok)
+        self.exit = QtWidgets.QPushButton(self.centralWidget)
+        self.exit.setObjectName("exit")
+        self.horizontalLayout_3.addWidget(self.exit)
+        self.verticalLayout.addLayout(self.horizontalLayout_3)
+        qt.setCentralWidget(self.centralWidget)
+        self.menuBar = QtWidgets.QMenuBar(qt)
+        self.menuBar.setGeometry(QtCore.QRect(0, 0, 483, 17))
+        self.menuBar.setObjectName("menuBar")
+        qt.setMenuBar(self.menuBar)
+        self.mainToolBar = QtWidgets.QToolBar(qt)
+        self.mainToolBar.setObjectName("mainToolBar")
+        qt.addToolBar(QtCore.Qt.TopToolBarArea, self.mainToolBar)
+        self.statusBar = QtWidgets.QStatusBar(qt)
+        self.statusBar.setObjectName("statusBar")
+        qt.setStatusBar(self.statusBar)
+
+        self.retranslateUi(qt)
+        self.exit.clicked.connect(qt.close)
+        self.Ok.clicked.connect(qt.hide)
+        QtCore.QMetaObject.connectSlotsByName(qt)
+
+    def retranslateUi(self, qt):
+        _translate = QtCore.QCoreApplication.translate
+        qt.setWindowTitle(_translate("qt", "qt"))
+        self.Underline.setText(_translate("qt", "Underline"))
+        self.Italic.setText(_translate("qt", "Italic"))
+        self.Bold.setText(_translate("qt", "Bold"))
+        self.Black.setText(_translate("qt", "Black"))
+        self.Red.setText(_translate("qt", "Red"))
+        self.Blue.setText(_translate("qt", "Blue"))
+        self.plainTextEdit.setPlainText(_translate("qt", "PYTHON"))
+        self.clear.setText(_translate("qt", "clear"))
+        self.Ok.setText(_translate("qt", "Ok"))
+        self.exit.setText(_translate("qt", "exit"))
